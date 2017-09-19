@@ -44,7 +44,9 @@ namespace JMFacebookLogin.Droid
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-			FacebookSdk.SdkInitialize(ApplicationContext);
+            #region [ Facebook ]
+
+            FacebookSdk.SdkInitialize(ApplicationContext);
 			callbackManager = CallbackManagerFactory.Create();
 
 			var loginCallback = new FacebookCallback<LoginResult>
@@ -62,6 +64,8 @@ namespace JMFacebookLogin.Droid
 			};
 
 			LoginManager.Instance.RegisterCallback(callbackManager, loginCallback);
+
+            #endregion
 
 
 
