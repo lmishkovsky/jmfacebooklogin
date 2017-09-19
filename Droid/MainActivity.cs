@@ -82,6 +82,7 @@ namespace JMFacebookLogin.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
 
+            // additional code
             callbackManager.OnActivityResult(requestCode, (int)resultCode, data);
         }
     }
